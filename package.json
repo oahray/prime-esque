@@ -1,17 +1,27 @@
 {
-  "name": "primeTest",
+  "name": "prime-numbers",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple Javascript ES6 class that returns prime numbers from a range or list of numbers.",
+  "main": "build/PrimeNumbers.js",
   "scripts": {
-    "test": "mocha test/**/*.js"
+    "build": "rm -rf build && babel src/ --watch --out-dir build/",
+    "start": "node build/sample.js",
+    "test": "mocha build/test/**.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "authors": ["Fadojutimi Temitayo Olusegun"],
+  "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
-    "expect": "^21.1.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.7.0",
     "mocha": "^3.5.3"
+  },
+  "dependencies": {
+    "expect": "^21.1.0"
   }
 }
